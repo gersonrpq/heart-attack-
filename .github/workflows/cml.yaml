@@ -17,6 +17,6 @@ jobs:
           cat metrics.txt >> report.md
           
           cml-publish features.png --md >> report.md
-          cml-puplish "ROC curve.png" --md >> report.md
+          cml-publish "ROC curve.png" --md >> report.md
           
           cml-send-comment report.md
