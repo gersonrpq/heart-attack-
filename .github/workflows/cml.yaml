@@ -13,5 +13,10 @@ jobs:
           pip install -r requirements.txt
           python train.py
           
-          echo "Model Metrics"
-          cat metrics.txt
+          echo "## Model Metrics" > report.md
+          cat metrics.txt >> report.md
+          
+          cml-publish features.png --md >> report.md
+          cml-puplish "ROC curve.png" --md >> report.md
+          
+          cml-send-comment report.md
