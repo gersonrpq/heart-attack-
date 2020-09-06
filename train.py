@@ -24,7 +24,7 @@ X_train,  X_test, y_train, y_test = train_test_split(df, y, test_size = 0.2, ran
 
 # Fitting a model
 #clssr = GradientBoostingClassifier(loss='exponential',criterion = 'mae', learning_rate = 0.9, random_state = seed)
-clssr = LogisticRegression(penalty = 'l1', solver = 'liblinear', C = 0.9, random_state = seed, max_iter = 150)
+clssr = LogisticRegression(penalty = 'l1', solver = 'liblinear', C = 0.85, random_state = seed, max_iter = 150)
 clssr.fit(X_train, y_train)
 
 # Reporting 
